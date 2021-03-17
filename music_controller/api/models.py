@@ -23,7 +23,8 @@ def generate_unique_code():
 class Room(models.Model):
 
     # code to enter a room
-    code = models.CharField(max_length=8, default="", unique=True)
+    code = models.CharField(
+        max_length=8, default=generate_unique_code, unique=True)
 
     # Host of the room and only 1 host per room
     host = models.CharField(max_length=50, unique=True)
