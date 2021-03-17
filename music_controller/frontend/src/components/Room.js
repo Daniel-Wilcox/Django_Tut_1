@@ -25,8 +25,6 @@ export default class Room extends Component {
   }
 
 
-
-
   render() {
     return (
       <div>
